@@ -11,6 +11,11 @@ set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -Wno-unused-parameter")
 set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -g -O0")
 #set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -fsanitize=address -static-libasan")
 
+add_compile_definitions(
+        SPDLOG_COMPILED_LIB
+        SPDLOG_ACTIVE_LEVEL=0
+)
+
 include_directories(
         include
         src
